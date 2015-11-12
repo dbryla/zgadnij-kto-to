@@ -4,11 +4,11 @@
 
 
 osoba_jest(robert_lewandowski) :- pozytywne(czy, mezczyzna),
-								  jest_to(polak),
-								  jest_to(pilkarz).
+                                  jest_to(polak),
+                                  jest_to(pilkarz).
 
 osoba_jest(iker_casillas) :- pozytywne(czy, mezczyzna), 
-							 jest_to(obcokrajowiec), 
+                             jest_to(obcokrajowiec), 
                              jest_to(pilkarz).
 
 osoba_jest(ayrton_senna) :- pozytywne(czy, mezczyzna),
@@ -22,8 +22,8 @@ osoba_jest(robert_kubica) :- pozytywne(czy, mezczyzna),
 
 
 osoba_jest(bartosz_kurek) :- pozytywne(czy, mezczyzna),
-							 jest_to(polak),
-							 jest_to(siatkarz).
+                             jest_to(polak),
+                             jest_to(siatkarz).
 
 
 osoba_jest(jennifer_aniston) :- negatywne(czy, mezczyzna),
@@ -32,7 +32,7 @@ osoba_jest(jennifer_aniston) :- negatywne(czy, mezczyzna),
                                 jest_to(mlody_aktor).
 
 osoba_jest(meryl_streep) :- negatywne(czy, mezczyzna),
-							jest_to(obcokrajowiec), 
+                            jest_to(obcokrajowiec), 
                             jest_to(aktor).
 
 osoba_jest(daniel_craig) :- jest_to(bond), jest_to(mlody_aktor).
@@ -40,55 +40,55 @@ osoba_jest(daniel_craig) :- jest_to(bond), jest_to(mlody_aktor).
 osoba_jest(sean_connery) :- jest_to(bond).
 
 osoba_jest(andrzej_grabowski) :- pozytywne(czy, mezczyzna),
-								 jest_to(polak), 
-                            	 jest_to(aktor),
-                            	 jest_to(kiepski).
+                                 jest_to(polak), 
+                                 jest_to(aktor),
+                                 jest_to(kiepski).
 
 osoba_jest(jerzy_stuhr) :- pozytywne(czy, mezczyzna),
-						   jest_to(polak), 
+                           jest_to(polak), 
                            jest_to(aktor).
 
 osoba_jest(jim_carrey) :- pozytywne(czy, mezczyzna),
-						  jest_to(obcokrajowiec),
+                          jest_to(obcokrajowiec),
                           jest_to(komediant).
 
 osoba_jest(jason_statham) :- pozytywne(czy, mezczyzna),
-						  	 jest_to(obcokrajowiec), 
-                          	 jest_to(aktor_z_filmu_akcji).
+                             jest_to(obcokrajowiec), 
+                             jest_to(aktor_z_filmu_akcji).
 
 osoba_jest(robert_de_niro) :- pozytywne(czy, mezczyzna),
-							  jest_to(obcokrajowiec), 
+                              jest_to(obcokrajowiec), 
                               jest_to(aktor).
 
 osoba_jest(agnieszka_dygant) :- negatywne(czy, mezczyzna),
-								jest_to(polak), 
-                            	jest_to(aktor_serlialowy).
+                                jest_to(polak), 
+                                jest_to(aktor_serlialowy).
 
 osoba_jest(alicja_bachleda_curus) :- negatywne(czy, mezczyzna),
-									 jest_to(polak), 
-                            		 jest_to(aktor).
+                                     jest_to(polak), 
+                                     jest_to(aktor).
 
 osoba_jest(lady_gaga) :- negatywne(czy, mezczyzna),
-						 jest_to(obcokrajowiec),
+                         jest_to(obcokrajowiec),
                          jest_to(wokalista),
                          jest_to(ekscentryk).
 
 osoba_jest(eminem) :- pozytywne(czy, mezczyzna),
-					  jest_to(obcokrajowiec),
+                      jest_to(obcokrajowiec),
                       jest_to(raper).
 
 osoba_jest(shakira) :- negatywne(mezczyzna),
-					   jest_to(obcokrajowiec),
+                       jest_to(obcokrajowiec),
                        jest_to(wokalista).
 
 osoba_jest(fryderyk_chopin) :- pozytywne(czy, mezczyzna),
-							   jest_to(polak),
+                               jest_to(polak),
                                jest_to(kompozytor),
                                jest_to(pianista),
                                jest_to(martwy).
 
 osoba_jest(krzysztof_penderecki) :- pozytywne(czy, mezczyzna),
-									jest_to(polak),
+                                    jest_to(polak),
                                     jest_to(kompozytor).
 
 
