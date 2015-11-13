@@ -77,7 +77,7 @@ osoba_jest(eminem) :- pozytywne(czy, mezczyzna),
                       jest_to(obcokrajowiec),
                       jest_to(raper).
 
-osoba_jest(shakira) :- negatywne(mezczyzna),
+osoba_jest(shakira) :- negatywne(czy, mezczyzna),
                        jest_to(obcokrajowiec),
                        jest_to(wokalista).
 
