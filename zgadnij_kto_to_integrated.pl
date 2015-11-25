@@ -124,24 +124,26 @@ negatywne(X,Y) :- xnegatywne(X,Y), !.
 negatywne(X,Y) :- \+xpozytywne(X,Y), pytaj(X,Y,nie).
 
 pytaj(X,Y,tak) :- !, ask(X, Y, Reply),
+                    println(Reply),
                     pamietaj(X,Y,Reply),
                     (Reply = 't').
                     
 pytaj(X,Y,nie) :- !, ask(X, Y, Reply),
+                    println(Reply),
                     pamietaj(X,Y,Reply),
                     (Reply = 'n').
                     
-pamietaj(X,Y,t) :- assertz(xpozytywne(X,Y)).
+pamietaj(X,Y,'t') :- debug('tak'), assertz(xpozytywne(X,Y)).
 
-pamietaj(X,Y,n) :- assertz(xnegatywne(X,Y)).
+pamietaj(X,Y,'n') :- debug('nie'), assertz(xnegatywne(X,Y)).
 
-wyczysc_fakty :- println('Przycisnij cos aby wyjsc'),
+wyczysc_fakty :- debug('Przycisnij cos aby wyjsc'),
                     retractall(xpozytywne(_,_)),
                     retractall(xnegatywne(_,_)).
 
-wykonaj :- println('test'), osoba_jest(X), !,
-            fancy_print('Twoja osoba moze byc %s', X),
+wykonaj :- osoba_jest(X), !,
+            fancy_print(X),
             wyczysc_fakty.
             
-wykonaj :- println('Nie jestem w stanie odgadnac co to za osoba.'),
+wykonaj :- debug('Nie jestem w stanie odgadnac co to za osoba.'),
             wyczysc_fakty.
