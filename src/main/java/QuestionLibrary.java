@@ -1,23 +1,20 @@
 import alice.tuprolog.*;
-import alice.tuprolog.Number;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class QuestionLibrary extends Library {
 
+    private static MainWindow mainWindow;
+
     public boolean ask_3(Var x, Var y, Var reply) {
-        System.out.println(String.format("%s ta osoba %s? (t/n)", x.getTerm(), y.getTerm()));
-        try {
-            Retriever.setLink(reply, Term.createTerm("\"n\""));
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
+        mainWindow.updateLabel(String.format("<html>%s ta osoba<br> %s?", x.getTerm(), y.getTerm()));
+        Retriever.setLink(reply, Term.createTerm(mainWindow.getAnswer()));
         return true;
     }
 
-    public boolean println_1(Var string) {
-        System.out.println(string);
+    public boolean println_1(Var var) {
+        System.out.println(var.getTerm());
+        mainWindow.updateLabel(String.format("%s", var.getTerm()));
         return true;
     }
 
@@ -26,12 +23,14 @@ public class QuestionLibrary extends Library {
         return true;
     }
 
-    public boolean fancy_print_1(Var string) {
-        System.out.println(String.format("Twoja osoba moze byc %s", string));
+    public boolean fancy_print_1(Var var) {
+        System.out.println(String.format("Twoja osoba moze byc %s", var.getTerm()));
+        mainWindow.updateLabel(String.format("<html>Twoja osoba moze byc<br> %s", var.getTerm()));
         return true;
     }
 
     public static void main(String[] args) throws InvalidLibraryException, IOException, InvalidTheoryException, MalformedGoalException {
+        mainWindow = new MainWindow();
         Prolog engine = new Prolog();
         engine.loadLibrary("QuestionLibrary");
         Theory theory = new Theory(new FileInputStream("zgadnij_kto_to_integrated.pl"));
