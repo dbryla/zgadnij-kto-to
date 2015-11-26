@@ -1,3 +1,5 @@
+package org.experts.guesser.gui;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -6,10 +8,11 @@ import java.awt.*;
  */
 public class MainWindow extends JFrame {
 
-    private static final String TAK = "Tak";
-    private static final String NIE = "Nie";
+    private static final String YES = "Tak";
+    private static final String NO = "Nie";
+    private static final String TITLE = "Zgadnij kto to";
 
-    private JLabel label;
+    private JLabel displayLabel;
     private JButton yesButton;
     private JButton noButton;
     private String answer;
@@ -21,30 +24,40 @@ public class MainWindow extends JFrame {
     }
 
     private void init() {
-        setTitle("Zgadnij kto to");
+        setTitle(TITLE);
         setSize(300, 150);
         setVisible(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
     }
 
     private void initComponents() {
-        label = new JLabel("");
-        yesButton = new JButton(TAK);
-        noButton = new JButton(NIE);
+        Box mainContainer = new Box(BoxLayout.Y_AXIS);
+        mainContainer.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        mainContainer.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+
         JPanel panel  = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-        add(panel);
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+
+        yesButton = new JButton(YES);
+        noButton = new JButton(NO);
 
         JPanel buttonPanel  = new JPanel();
-        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
+        buttonPanel.setLayout(new GridLayout(1, 2));
         buttonPanel.add(yesButton);
-        buttonPanel.add(Box.createRigidArea(new Dimension(5,0)));
+        buttonPanel.add(Box.createGlue());
         buttonPanel.add(noButton);
 
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-        panel.add(label);
-        panel.add(Box.createRigidArea(new Dimension(0,5)));
+        JPanel questionPanel  = new JPanel();
+        displayLabel = new JLabel("");
+        questionPanel.add(displayLabel);
+
+        this.add(mainContainer);
+        mainContainer.add(Box.createVerticalGlue());
+        mainContainer.add(panel);
+        mainContainer.add(Box.createVerticalGlue());
+        panel.add(questionPanel);
         panel.add(Box.createGlue());
         panel.add(buttonPanel);
         panel.setVisible(true);
@@ -55,10 +68,9 @@ public class MainWindow extends JFrame {
         noButton.addActionListener(actionEvent -> answer = "n");
     }
 
-
     public void updateLabel(String string) {
         answer = null;
-        label.setText(string.replace("_", " ").replace("'", ""));
+        displayLabel.setText(string.replace("'", "").replace("_", " "));
     }
 
     public String getAnswer() {
