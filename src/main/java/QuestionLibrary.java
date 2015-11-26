@@ -25,7 +25,7 @@ public class QuestionLibrary extends Library {
 
     public boolean fancy_print_1(Var var) {
         System.out.println(String.format("Twoja osoba moze byc %s", var.getTerm()));
-        mainWindow.updateLabel(String.format("<html>Twoja osoba moze byc<br> %s", var.getTerm()));
+        mainWindow.updateLabel(String.format("<html>Twoja osoba może być<br> %s", var.getTerm()));
         return true;
     }
 

@@ -58,7 +58,7 @@ public class MainWindow extends JFrame {
 
     public void updateLabel(String string) {
         answer = null;
-        label.setText(string.replace("_", " "));
+        label.setText(string.replace("_", " ").replace("'", ""));
     }
 
     public String getAnswer() {
