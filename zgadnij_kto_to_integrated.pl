@@ -93,25 +93,25 @@ osoba_jest(krzysztof_penderecki) :- pozytywne(czy, to_meżczyzna),
                                     jest_to(kompozytor).
 
 
-jest_to(polak) :- pozytywne(urodziła_się, w_Polsce).
+jest_to(polak) :- pozytywne(czy, urodziła_się_w_Polsce).
 jest_to(obcokrajowiec) :- \+jest_to(polak).
 jest_to(pilkarz) :- jest_to(sport_druzynowy), pozytywne(czy, kopie_piłke).
 jest_to(siatkarz) :- jest_to(sport_druzynowy), negatywne(czy, kopie_piłke).
-jest_to(sport_druzynowy) :- pozytywne(uprawia, sport), pozytywne(uprawia, sport_drużynowy).
-jest_to(rajdowiec) :-  pozytywne(uprawia, sport), negatywne(uprawia, sport_drużynowy).
-jest_to(aktor) :- pozytywne(gra, w_filmach).
-jest_to(bond) :-  pozytywne(czy, to_meżczyzna), jest_to(obcokrajowiec), jest_to(aktor), pozytywne(grała, bonda).
-jest_to(artysta_muzyczny) :- pozytywne(zajmuje_się, muzyką).
+jest_to(sport_druzynowy) :- pozytywne(czy, uprawia_sport), pozytywne(czy, uprawia_sport_drużynowy).
+jest_to(rajdowiec) :-  pozytywne(czy, uprawia_sport), negatywne(czy, uprawia_sport_drużynowy).
+jest_to(aktor) :- pozytywne(czy, gra_w_filmach).
+jest_to(bond) :-  pozytywne(czy, to_meżczyzna), jest_to(obcokrajowiec), jest_to(aktor), pozytywne(czy, grała_Bonda).
+jest_to(artysta_muzyczny) :- pozytywne(czy, zajmuje_się_muzyką).
 jest_to(raper) :- jest_to(artysta_muzyczny), pozytywne(czy, rapuje).
 jest_to(kompozytor) :- jest_to(artysta_muzyczny), pozytywne(czy, komponuje).
 jest_to(wokalista) :- jest_to(artysta_muzyczny), pozytywne(czy, śpiewa).
-jest_to(mlody_aktor) :- jest_to(aktor), pozytywne(ma, mniej_niż_50_lat).
-jest_to(kiepski) :- pozytywne(grala, w_Świat_według_kiepskich).
-jest_to(komediant) :- jest_to(aktor), pozytywne(gra, w_komediach).
-jest_to(aktor_z_filmu_akcji) :- jest_to(aktor), pozytywne(gra, w_filmach_akcji).
-jest_to(pianista) :- jest_to(artysta_muzyczny), pozytywne(gra, na_pianinie).
+jest_to(mlody_aktor) :- jest_to(aktor), pozytywne(czy, ma_mniej_niż_50_lat).
+jest_to(kiepski) :- pozytywne(czy, grała_w_Świat_według_kiepskich).
+jest_to(komediant) :- jest_to(aktor), pozytywne(czy, gra_w_komediach).
+jest_to(aktor_z_filmu_akcji) :- jest_to(aktor), pozytywne(czy, gra_w_filmach_akcji).
+jest_to(pianista) :- jest_to(artysta_muzyczny), pozytywne(czy, gra_na_pianinie).
 jest_to(martwy) :- pozytywne(czy, nie_żyje).
-jest_to(aktor_serlialowy) :- jest_to(aktor), pozytywne(gra, w_serialach).
+jest_to(aktor_serlialowy) :- jest_to(aktor), pozytywne(czy, gra_w_serialach).
 jest_to(ekscentryk) :- pozytywne(czy, ma_ekscentryczne_ubiory).
 
 

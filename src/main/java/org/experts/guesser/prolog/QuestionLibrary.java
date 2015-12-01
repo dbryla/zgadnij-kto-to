@@ -31,8 +31,9 @@ public class QuestionLibrary extends Library {
         App.mainWindow.dispose();
         String person = var.getTerm().toString().replace("_", " ");
         JOptionPane.showMessageDialog(null,
-                String.format("Twoja osoba może być %s",
+                String.format("Twoją osobą może być %s",
                         App.changeFirstLettersToUpperCase(person)));
+        System.exit(0);
         return true;
     }
 

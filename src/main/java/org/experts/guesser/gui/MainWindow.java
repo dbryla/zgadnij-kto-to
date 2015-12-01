@@ -1,5 +1,7 @@
 package org.experts.guesser.gui;
 
+import org.experts.guesser.App;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -25,7 +27,7 @@ public class MainWindow extends JFrame {
 
     private void init() {
         setTitle(TITLE);
-        setSize(300, 150);
+        setSize(350, 150);
         setVisible(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,7 +72,7 @@ public class MainWindow extends JFrame {
 
     public void updateLabel(String string) {
         answer = null;
-        displayLabel.setText(string.replace("'", "").replace("_", " "));
+        displayLabel.setText(App.changeFirstLetterToUpperCase(string.replace("'", "").replace("_", " ")));
     }
 
     public String getAnswer() {

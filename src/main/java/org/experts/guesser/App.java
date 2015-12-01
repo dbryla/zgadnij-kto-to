@@ -28,9 +28,13 @@ public class App {
         String[] strings = string.split(" ");
         StringBuilder resultString = new StringBuilder();
         for (String s : strings) {
-            resultString.append(String.valueOf(s.charAt(0)).toUpperCase().concat(s.substring(1)));
+            resultString.append(changeFirstLetterToUpperCase(s));
             resultString.append(" ");
         }
         return resultString.toString();
+    }
+
+    public static String changeFirstLetterToUpperCase(String string) {
+        return String.valueOf(string.charAt(0)).toUpperCase().concat(string.substring(1));
     }
 }
