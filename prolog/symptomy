@@ -1,0 +1,84 @@
+symptomy:
+	1. mieszka w Polse
+	2. uprawia sport
+	3. sport druzynowy
+	4. gra w filmach
+	5. zajmuje sie muzyka
+	6. czy rapuje
+	7. czy komponuje
+	8. czy spiewa 
+	9. czy mezczyzna
+	10. gral Bonda
+	11. ma mniej niz 50 lat
+	12. urodzil sie w polsce
+	13. czy gra w pilke nozna
+	14. czy gral Ferdka Kiepskiego
+	15. czy zyje
+	16. czy gra w komediach
+	17. czy film akcji
+	18. czy gra na pianinie
+	19. czy gra w serialach
+	20. czy ma ekscentryczny ubior
+
+hipotezy:
+	-- sportowcy --
+	1. Robert Lewandowski
+	2. Iker Casillas
+	3. Robert Kubica
+	4. Bartosz Kurek
+	5. Ayrton Senna
+	-- aktorzy --
+	6. Meryl Streep
+	7. Robert De Niro
+	8. Jennifer Aniston
+	9. Sean Connery
+	10. Daniel Craig
+	11. Andrzej Grabowski
+	12. Jerzy Stuhr
+	13. Jim Carrey
+	14. Jason Statham
+	15. Agnieszka Dygant
+	16. Alicja Bachleda-Curuś
+	-- muzycy --
+	17. Fryderyk Chopin
+	18. Eminem
+	19. Krzysztof Penderecki
+	20. Shakira
+	21. Lady Gaga
+
+fakt pośredni (fp)
+	1. pilkarz - gra w pilke nozna 
+	2. rajdowiec - uprawia sport niedruzynowy
+	3. bond - obcokrajowiec, aktor, mezczyzna grajacy Bonda
+	4. raper - arysta muzyczny rapujacy
+	5. kompozytor - artysta muzyczny komponujacy
+	6. wokalista - artysta muzyczny spiewajacy
+	7. mlody aktor - aktor mniej niz 50 lat
+	8. siatkarz - uprawia sport druzynowy ale nie pilke nozna
+	9. ferdek kiepski - polski aktor, mezczyzna grajacy Ferdka Kiepskiego
+	10. sport druzynowy - sport i druzynowy
+
+reguly:
+	1. polak
+	2. obcojkrajowiec
+	3. pilkarz - fp
+	4. rajdowiec - fp
+	5. aktor
+	6. bond - fp
+	7. artysta muzyczny 
+	8. raper - fp
+	9. kompozytor - fp
+	10. wokalista - fp
+	11. mezczyzna
+	12. mlody
+	13. siatkarz - fp
+	14. Kiepski - fp
+	15. sport druzynowy - fp
+	16. martwy
+	17. komediant - fp
+	18. aktor z filmu akcji - fp
+	19. pianista - fp
+	20. aktor serialowy - fp
+	21. ekscentryk
+	+ hipotezy 
+	= 42
