@@ -30,7 +30,8 @@ public class App {
                 network.setFactForFalse(fact);
             }
         }
-        System.out.println(network.getAllActors()); // get the one with the biggest probability or whatever
 
+//        new MainWindow(network);
+        network.getAllActors().forEach(actor -> System.out.println(actor.getName())); // get the one with the biggest probability or whatever
     }
 }
