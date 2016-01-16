@@ -130,7 +130,7 @@ public class MainWindow extends JFrame {
                     }
                 }
 
-                String label = mostSuitableActor != null ? mostSuitableActor.getName() : "Brak odpowiedniej osoby";
+                String label = mostSuitableActor != null ? getLabel(mostSuitableActor) : "Brak odpowiedniej osoby";
                 questionLabel.setText(label);
                 okButton.setVisible(false);
                 yesRadioButton.setVisible(false);
@@ -140,5 +140,9 @@ public class MainWindow extends JFrame {
                 network.clearAllFacts();
             }
         });
+    }
+
+    private String getLabel(Actor mostSuitableActor) {
+        return mostSuitableActor.getName() + " " + String.format( "%.2f", mostSuitableActor.getProbability()) + " %";
     }
 }
