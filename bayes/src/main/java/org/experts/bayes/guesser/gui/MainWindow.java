@@ -57,7 +57,7 @@ public class MainWindow extends JFrame {
         yesRadioButton.setActionCommand(YES);
         dontKnowRadioButton = new JRadioButton(DONT_KNOW);
         dontKnowRadioButton.setActionCommand(DONT_KNOW);
-        yesRadioButton.setSelected(true);
+        dontKnowRadioButton.setSelected(true);
         noRadioButton = new JRadioButton(NO);
         noRadioButton.setActionCommand(NO);
 
@@ -106,7 +106,7 @@ public class MainWindow extends JFrame {
                     network.setFactForTrue(currentFact);
                     break;
                 case NO:
-                    network.setFactForTrue(currentFact);
+                    network.setFactForFalse(currentFact);
                     break;
                 case DONT_KNOW:
                     network.setFactForUnknown(currentFact);

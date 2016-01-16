@@ -66,8 +66,6 @@ public class JSmileGuessWhoNetwork implements GuessWhoNetwork{
 
     @Override
     public void setFactForUnknown(Fact fact) {
-        net.clearEvidence(fact.getNodeId());
-        net.updateBeliefs();
     }
 
     @Override
