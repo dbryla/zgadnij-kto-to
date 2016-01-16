@@ -53,10 +53,11 @@ public class MainWindow extends JFrame {
         questionLabel = new JLabel(currentFact != null ? currentFact.getName() : "Brak faktów");
 
         yesRadioButton = new JRadioButton(YES);
-        yesRadioButton.setSelected(true);
+
         yesRadioButton.setActionCommand(YES);
         dontKnowRadioButton = new JRadioButton(DONT_KNOW);
         dontKnowRadioButton.setActionCommand(DONT_KNOW);
+        yesRadioButton.setSelected(true);
         noRadioButton = new JRadioButton(NO);
         noRadioButton.setActionCommand(NO);
 
@@ -117,6 +118,7 @@ public class MainWindow extends JFrame {
             if(iterator.hasNext()){
                 currentFact = iterator.next();
                 questionLabel.setText(currentFact.getName());
+                dontKnowRadioButton.setSelected(true);
             }
             else{
                 double maxProbability = -0.1f;
